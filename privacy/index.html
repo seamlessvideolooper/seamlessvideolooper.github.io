@@ -14,7 +14,7 @@
 </head>
 <body>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: July 5, 2026</p>
+    <p class="updated">Last updated: July 16, 2026</p>
 
     <h2>What the app does</h2>
     <p>SeamlessVideoLooper creates seamless looping videos entirely on your device. All video processing is performed locally — your videos never leave your phone.</p>
@@ -23,15 +23,16 @@
     <p>Video analysis, loop-point detection, blending, and rendering all happen on your device. No video data is uploaded to any server.</p>
 
     <h2>Optional data collection</h2>
-    <p>The app collects data <strong>only</strong> when you explicitly choose to:</p>
+    <p>The app collects limited diagnostic data. Every category below can be turned off in Settings, and none of it ever includes your videos:</p>
     <ul>
         <li><strong>Feedback reports</strong> (user-initiated): When you tap "Send Feedback," the app may include device model, Android version, app version, device tier, a log snippet, current step, settings, video metadata, quality metrics, and an optional screenshot. You can uncheck any item before sending.</li>
-        <li><strong>Crash reports</strong> (opt-out): Automatic crash reports are enabled by default and can be disabled in Settings. Crash reports include the stack trace, thread name, and device information.</li>
-        <li><strong>Identifiers</strong>: Feedback and crash reports are linked to a persistent <strong>device identifier (Android ID)</strong> and an anonymous <strong>app-account ID</strong> (created by Firebase Anonymous Authentication). These let us group and de-duplicate reports from the same install. They are not tied to your name, email, or any real-world identity, and are never used as an advertising ID.</li>
+        <li><strong>Crash reports</strong> (on by default, opt-out): Automatic crash reports are enabled by default and can be disabled in Settings. Crash reports include the stack trace, thread name, and device information.</li>
+        <li><strong>Hardware Test results</strong> (on by default, opt-out): The app runs a Hardware Test to find out which video and AI components your device supports. Completed test results are uploaded automatically — they include device model, Android version, app version, device performance tier, and per-component outcomes (whether each component works on your device, how fast it runs, and a short error description when it fails). This helps us improve compatibility across devices. You can disable it in Settings ("Report Hardware Test results").</li>
+        <li><strong>Identifiers</strong>: Feedback, crash, and Hardware Test reports are linked to a persistent <strong>device identifier (Android ID)</strong> and an anonymous <strong>app-account ID</strong> (created by Firebase Anonymous Authentication). These let us group and de-duplicate reports from the same install. They are not tied to your name, email, or any real-world identity, and are never used as an advertising ID.</li>
     </ul>
 
     <h2>Third-party services</h2>
-    <p>The app uses the following Firebase services <strong>solely</strong> for feedback and crash report submission:</p>
+    <p>The app uses the following Firebase services <strong>solely</strong> for report submission (feedback, crash, and Hardware Test reports):</p>
     <ul>
         <li>Firebase Authentication (anonymous sign-in)</li>
         <li>Firebase Firestore (report storage)</li>
@@ -40,7 +41,7 @@
     <p>No other third-party services, analytics SDKs, or advertising SDKs are used.</p>
 
     <h2>Data retention</h2>
-    <p>Feedback reports are stored in Firebase Firestore. Local screenshot cache on your device expires after 30 days. You can disable crash sharing at any time in Settings.</p>
+    <p>Reports (feedback, crash, and Hardware Test results) are stored in Firebase Firestore. Local screenshot cache on your device expires after 30 days. You can disable crash sharing and Hardware Test result sharing at any time in Settings.</p>
 
     <h2>No ads, no tracking, no analytics</h2>
     <p>SeamlessVideoLooper does not use advertising SDKs, analytics SDKs, or tracking pixels. The app does not track your usage patterns or browsing behavior.</p>
