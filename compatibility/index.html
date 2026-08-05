@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Android Video Loop Maker Compatibility and FAQ</title>
+  <meta name="description" content="Requirements and answers for an offline Android seamless video loop maker: formats, watermark, audio, camera movement, quality, storage, and rendering.">
+  <link rel="canonical" href="https://seamlessvideolooper.github.io/compatibility/">
+  <meta property="og:type" content="website"><meta property="og:title" content="Seamless Video Looper compatibility and FAQ"><meta property="og:description" content="Android requirements, media behavior, output, and common questions."><meta property="og:image" content="https://seamlessvideolooper.github.io/assets/social-preview.png">
+  <link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/site.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does Seamless Video Looper work without internet?","acceptedAnswer":{"@type":"Answer","text":"Video analysis, loop search, blending, and rendering run on the phone. Network access is used for feedback, crash reports, Hardware Test reports, and a technical result record when a render is shared."}},{"@type":"Question","name":"Does it make boomerang videos?","acceptedAnswer":{"@type":"Answer","text":"No. It creates a forward-playing clip whose selected end returns to its selected beginning."}},{"@type":"Question","name":"Does it preserve the original quality?","acceptedAnswer":{"@type":"Answer","text":"The output is re-encoded as H.264 video in an MP4 container, so compression is applied again."}},{"@type":"Question","name":"Why is the seam still visible?","acceptedAnswer":{"@type":"Answer","text":"Strong foreground motion, occlusion, lighting change, or large camera movement can leave no clean endpoint pair. Try another candidate, a shorter blend, or a simpler section of the clip."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Product","item":"https://seamlessvideolooper.github.io/"},{"@type":"ListItem","position":2,"name":"Compatibility and FAQ","item":"https://seamlessvideolooper.github.io/compatibility/"}]}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="/"><img src="/assets/icon.png" alt=""><span>Seamless Video Looper</span></a><div class="nav-links"><a href="/how-it-works/">How it works</a><a href="/examples/">Inside the app</a><a href="/compatibility/" aria-current="page">Compatibility</a><a href="/privacy/">Privacy</a><a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.seamlessvideolooper.android">Get the app</a></div></nav></header>
+<main id="main">
+  <header class="page-hero"><div class="wrap"><p class="breadcrumb"><a href="/">Product</a> / Compatibility &amp; FAQ</p><span class="eyebrow">Before you begin</span><h1>Built for Android 8.0 and later.</h1><p class="lede">Media decoding and advanced motion processing also depend on the codecs and hardware available on your phone.</p></div></header>
+
+  <section class="section"><div class="wrap"><div class="section-head"><div><span class="eyebrow">Media and output</span><h2>What the app works with.</h2></div><p class="section-intro">Choose videos through Android’s file picker, another app’s share action, or an open-file action.</p></div><div class="table-wrap"><table><caption>Media behavior</caption><thead><tr><th>Area</th><th>What to expect</th></tr></thead><tbody>
+    <tr><td>Android version</td><td>Android 8.0 / API 26 or later.</td></tr>
+    <tr><td>Input video</td><td>Video formats that the phone’s Android media stack can decode. Exact codec support varies by device.</td></tr>
+    <tr><td>Output video</td><td>MP4 container with H.264/AVC video.</td></tr>
+    <tr><td>Audio</td><td>Mute, crossfade, or zero-crossing cut. Retained audio is encoded as AAC-LC.</td></tr>
+    <tr><td>Orientation</td><td>Portrait and landscape video are supported; rotation is applied to the output dimensions.</td></tr>
+    <tr><td>Frame rate</td><td>The source frame rate is resolved to an integer output frame rate.</td></tr>
+    <tr><td>Resolution</td><td>Output follows the selected resolution scale and uses even dimensions for video encoding.</td></tr>
+    <tr><td>HDR and wide colour</td><td>HDR preservation is not currently guaranteed.</td></tr>
+    <tr><td>Clip length and size</td><td>No single maximum is published. Longer, larger, and higher-frame-rate clips need more time and temporary storage.</td></tr>
+  </tbody></table></div></div></section>
+
+  <section class="section dark"><div class="wrap"><div class="section-head"><div><span class="eyebrow">Performance</span><h2>The app adapts to the phone.</h2></div><p class="section-intro">A Hardware Test checks the processing backends available on the device and selects practical defaults.</p></div><div class="grid-3"><article class="card"><span class="number">MEMORY</span><h3>Disk-backed processing</h3><p>Large intermediate frames are written to temporary storage instead of being kept together in memory.</p></article><article class="card"><span class="number">ML METHODS</span><h3>Checked before use</h3><p>Optical flow and frame interpolation may be unavailable or slower on some phones.</p></article><article class="card"><span class="number">BACKGROUND</span><h3>Visible progress</h3><p>Long renders run as Android foreground work with progress shown in a notification.</p></article></div></div></section>
+
+  <section class="section" id="faq"><div class="narrow"><span class="eyebrow">FAQ</span><h2 style="margin-bottom:42px">Common questions.</h2><div class="faq">
+    <details><summary>Does it work without an internet connection?</summary><p>Video analysis, loop search, blending, and rendering run on your phone. Network access is used for feedback, crash reports, Hardware Test reports, and a technical result record when you share a render.</p></details>
+    <details><summary>Does it add a watermark?</summary><p>No. Renders do not include an app watermark.</p></details>
+    <details><summary>Is it free? Are there ads or purchases?</summary><p>The current Google Play release is free, with no ads, subscription, or in-app purchase flow.</p></details>
+    <details><summary>Does it make boomerang videos?</summary><p>No. A boomerang reverses the footage. Seamless Video Looper keeps the result moving forward from the chosen end back to the chosen beginning.</p></details>
+    <details><summary>Does it find loop points automatically?</summary><p>Yes. Easy mode searches automatically and can prepare up to four candidates. Advanced mode also lets you define a custom cut.</p></details>
+    <details><summary>Can it compensate for camera movement or zoom?</summary><p>Yes. Seam alignment can correct horizontal and vertical shift, zoom, or both. Camera drift can be preserved with Dance or reduced with Lock.</p></details>
+    <details><summary>Does it preserve audio?</summary><p>Choose Mute, Crossfade, or Zero-crossing cut. Retained audio is processed and encoded as AAC.</p></details>
+    <details><summary>Does it preserve the original quality?</summary><p>The result is re-encoded as H.264 video, so compression is applied again. Resolution may also be scaled by your settings or device profile.</p></details>
+    <details><summary>Why is the seam still visible?</summary><p>Try another candidate or a shorter blend. Fast crossings, occlusion, lighting changes, and large camera moves can make every possible handoff visible.</p></details>
+    <details><summary>Why do moving objects look doubled or distorted?</summary><p>Crossfades can ghost moving objects. Motion warping and interpolation can bend detail when objects overlap, uncover the background, or move unpredictably.</p></details>
+    <details><summary>How much storage does rendering need?</summary><p>It depends on clip length, resolution, frame rate, and settings. The app creates temporary extracted and synthesized frames as well as the final encoded file.</p></details>
+    <details><summary>Where is the rendered file saved?</summary><p>The result is created in the app’s private cache, then offered through Android’s share sheet. Choose a storage provider or another app as the destination.</p></details>
+    <details><summary>What happens if I leave the app during rendering?</summary><p>Rendering continues as foreground work with a progress notification. You can cancel it from the app or notification.</p></details>
+    <details><summary>How can I report a bad result?</summary><p>Use Send Feedback in the app. You can review the included context and decide whether to attach a screenshot.</p></details>
+  </div></div></section>
+</main>
+<footer class="site-footer"><div class="wrap"><div class="footer-grid"><div><h2>Seamless Video Looper</h2><p class="fine">Keep the moment. Lose the jump.</p></div><div class="footer-links"><strong>Product</strong><a href="/">Product</a><a href="/how-it-works/">How it works</a><a href="/examples/">Inside the app</a></div><div class="footer-links"><strong>Support</strong><a href="/privacy/">Privacy</a><a href="mailto:scintech.dev@gmail.com">Contact</a><a href="https://play.google.com/store/apps/details?id=com.seamlessvideolooper.android">Google Play</a></div></div></div></footer>
+</body></html>
