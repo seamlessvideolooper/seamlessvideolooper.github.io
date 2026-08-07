@@ -1,6 +1,6 @@
 # Seamless Video Looper
 
-Seamless Video Looper is an Android app that finds candidate loop points in a video, previews them, and renders a forward-playing seamless loop — the selected end returns to the selected beginning. It is not a boomerang (it does not reverse footage). Loop search, stabilization, blending, audio processing, and rendering all happen on the device; video files are not uploaded for processing. The current Google Play release has no ads, no subscription, and no in-app purchase.
+Seamless Video Looper is an Android app that finds candidate loop points in a video, previews them, and renders a forward-playing seamless loop — the selected end returns to the selected beginning. Loop search, stabilization, blending, audio processing, and rendering all happen on the device; video files are not uploaded for processing. The current Google Play release has no ads, no subscription, and no in-app purchase.
 
 Published by SciNTech (contact: scintech.dev@gmail.com). Get the app: https://play.google.com/store/apps/details?id=com.seamlessvideolooper.android
 
