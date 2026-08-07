@@ -132,6 +132,9 @@ h3 { font-size: 1.18rem; letter-spacing: -.01em; }
 .section.sand .card { background: var(--sand-card); border-color: var(--sand-edge); box-shadow: 7px 7px 0 var(--sand-shadow); }
 .section.sand .card p { color: var(--ink-muted); }
 
+.card-diagram { width: min(230px, 100%); margin: 0 auto 18px; }
+.card-diagram svg { display: block; width: 100%; height: auto; }
+
 .fact-grid { margin: 0; }
 .fact-grid dt { margin: 0 0 10px; font-weight: 750; font-size: 1.05rem; letter-spacing: -.01em; }
 .fact-grid dd { margin: 0; color: var(--muted); font-size: .97rem; }
@@ -254,11 +257,13 @@ td:first-child { font-weight: 650; white-space: nowrap; }
   .steps { grid-template-columns: 1fr 1fr; }
   .shot-grid { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .card-diagram { width: min(180px, 100%); }
 }
 
 @media (max-width: 640px) {
   .grid-2, .grid-3, .steps, .shot-grid, .shot-grid.pair { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
+  .card-diagram { width: min(150px, 100%); }
   .nav { flex-wrap: wrap; padding-block: 10px; }
   .nav-links { gap: 0; }
   .nav-links a { padding: .5rem .55rem; font-size: .85rem; }
