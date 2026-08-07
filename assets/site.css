@@ -132,6 +132,11 @@ h3 { font-size: 1.18rem; letter-spacing: -.01em; }
 .section.sand .card { background: var(--sand-card); border-color: var(--sand-edge); box-shadow: 7px 7px 0 var(--sand-shadow); }
 .section.sand .card p { color: var(--ink-muted); }
 
+.fact-grid { margin: 0; }
+.fact-grid dt { margin: 0 0 10px; font-weight: 750; font-size: 1.05rem; letter-spacing: -.01em; }
+.fact-grid dd { margin: 0; color: var(--muted); font-size: .97rem; }
+.section.sand .fact-grid dd { color: var(--ink-muted); }
+
 .kicker { display: inline-block; font-family: var(--mono); font-size: .74rem; font-weight: 700; letter-spacing: .12em; color: var(--tan-text); }
 .section.sand .kicker { color: var(--rust-deep); }
 

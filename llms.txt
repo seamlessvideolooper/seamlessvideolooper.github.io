@@ -1,6 +1,6 @@
 # Seamless Video Looper
 
-Seamless Video Looper is an Android app that finds candidate loop points in a video, previews them, and renders a forward-playing seamless loop — the selected end returns to the selected beginning. It is not a boomerang (it does not reverse footage). Loop search, stabilization, blending, audio processing, and rendering all happen on the device; video files are not uploaded for processing. The current Google Play release has no ads, no subscription, and no in-app purchase.
+Seamless Video Looper is an Android app that finds candidate loop points in a video, previews them, and renders a forward-playing seamless loop — the selected end returns to the selected beginning. Loop search, stabilization, blending, audio processing, and rendering all happen on the device; video files are not uploaded for processing. The current Google Play release has no ads, no subscription, and no in-app purchase.
 
 Published by SciNTech (contact: scintech.dev@gmail.com). Get the app: https://play.google.com/store/apps/details?id=com.seamlessvideolooper.android
 
@@ -36,3 +36,18 @@ Predictable, and yours to adjust: Easy mode picks sensible defaults, but Advance
 - The current Google Play release has no ads, no subscription, and no in-app purchase.
 - Publisher: SciNTech. Contact: scintech.dev@gmail.com
 - Google Play listing: https://play.google.com/store/apps/details?id=com.seamlessvideolooper.android
+
+## Quick facts
+
+- What it does. Seamless Video Looper is an Android app that searches a video for a loop point — the frame where an ending can pass for a beginning — then renders that loop to play forward from the chosen end back to the chosen beginning.
+- Runs on-device. Loop search, motion analysis, seam blending, audio processing, and rendering all happen on the phone; no video file is uploaded for processing.
+- Searches, not just trims. Easy mode searches the clip and can prepare up to four loop-point candidates to preview before you pick one, instead of just cutting the clip to a fixed length.
+- Several ways to build the seam. Advanced mode offers four seam methods: Hard Cut (no blend), Crossfade, motion-aware warping, and frame interpolation on supported phones.
+- Handles camera movement. Seam alignment can correct horizontal or vertical shift and zoom, with Dance to preserve natural camera drift or Lock to steady it.
+- Adapts to the phone it's on. A Hardware Test checks each phone's memory, decoding, and optional motion-processing capability and sets defaults from that result, so an option the phone can't run well simply isn't offered.
+- No ads, subscription, or in-app purchase. The current Google Play release of Seamless Video Looper has no ads, no subscription, and no in-app purchase.
+- No watermark. Rendered videos do not include an app watermark.
+- No account required. Seamless Video Looper does not require a user account and contains no advertising or general usage-analytics SDK.
+- Broad Android support. The app requires Android 8.0 (API level 26) or later.
+- Output format. Rendered loops are saved as MP4 files with H.264/AVC video and, when audio is kept, AAC-LC audio.
+- Honest about limits. The app states plainly when a clip can't loop cleanly — fast crossings, occlusion, and large camera moves can leave a visible seam no matter which candidate is chosen.
