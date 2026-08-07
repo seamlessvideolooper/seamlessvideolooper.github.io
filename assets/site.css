@@ -149,15 +149,26 @@ h3 { font-size: 1.18rem; letter-spacing: -.01em; }
 .cube::after { content: ""; position: absolute; top: -4.5px; right: -9px; width: 9px; height: 100%; background: var(--rust); transform: skewY(-45deg); }
 .cube span::before { content: counter(step); }
 
-/* ---------- moment band ---------- */
+/* ---------- moment band: signed note ---------- */
 
-.moment { position: relative; background: linear-gradient(115deg, var(--orange-side), var(--rust) 42%, var(--rust-deep) 78%); border-block: 1px solid var(--edge); }
-.moment .wrap { display: grid; grid-template-columns: auto 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; padding-block: clamp(48px, 7vw, 80px); }
-.moment img { width: clamp(120px, 18vw, 190px); border-radius: 24px; box-shadow: 10px 10px 0 rgba(19, 26, 35, .45); }
-.moment h2 { color: #fff; }
-.moment p { margin: 14px 0 0; color: #fff; font-size: 1.08rem; max-width: 54ch; }
-.moment .eyebrow { color: #fff; }
-.moment .eyebrow::before { background: #fff; box-shadow: 3px 3px 0 rgba(19, 26, 35, .4); }
+.moment { position: relative; background: linear-gradient(115deg, var(--orange-side), var(--rust) 42%, var(--rust-deep) 78%); border-block: 1px solid var(--edge); padding-block: clamp(72px, 11vw, 128px); }
+.moment-wrap { display: flex; flex-direction: column; align-items: center; }
+.moment-art { width: clamp(104px, 13vw, 136px); border-radius: 22px; box-shadow: 9px 9px 0 rgba(19, 26, 35, .45); margin-bottom: clamp(32px, 5vw, 44px); }
+
+.moment-letter { width: min(600px, 100%); background: rgba(19, 26, 35, .3); border: 1px solid rgba(255, 255, 255, .22); border-radius: var(--radius); padding: clamp(32px, 5vw, 56px) clamp(26px, 6vw, 60px); box-shadow: 11px 11px 0 rgba(19, 26, 35, .38); }
+.moment-letter .facet-strip { margin: 0 0 28px; }
+.moment-letter .facet-strip i:nth-child(1) { background: #fff; }
+.moment-letter .facet-strip i:nth-child(2) { background: rgba(255, 255, 255, .7); }
+.moment-letter .facet-strip i:nth-child(3) { background: rgba(255, 255, 255, .5); }
+.moment-letter .facet-strip i:nth-child(4) { background: rgba(255, 255, 255, .35); }
+
+.moment h2 { color: #fff; font-family: ui-serif, Georgia, "Times New Roman", serif; font-style: italic; font-weight: 600; font-size: clamp(1.5rem, 3vw, 2rem); max-width: none; margin-bottom: clamp(22px, 4vw, 30px); }
+
+.moment-body { max-width: 52ch; font-family: ui-serif, Georgia, "Times New Roman", serif; }
+.moment-body p { color: #fff; font-size: 1.05rem; line-height: 1.85; margin: 0 0 1.35em; }
+.moment-body p:last-child { margin-bottom: 0; }
+
+.moment-sign { margin: clamp(26px, 4vw, 36px) 0 0; text-align: right; font-family: ui-serif, Georgia, "Times New Roman", serif; font-style: italic; font-size: 1.05rem; color: #fff; opacity: .92; }
 
 /* ---------- callout ---------- */
 
@@ -242,13 +253,15 @@ td:first-child { font-weight: 650; white-space: nowrap; }
 
 @media (max-width: 640px) {
   .grid-2, .grid-3, .steps, .shot-grid, .shot-grid.pair { grid-template-columns: 1fr; }
-  .moment .wrap { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .nav { flex-wrap: wrap; padding-block: 10px; }
   .nav-links { gap: 0; }
   .nav-links a { padding: .5rem .55rem; font-size: .85rem; }
   .nav-cta { margin-left: 0; }
   .shot-grid.pair { justify-content: stretch; }
+  .moment-letter { padding: 30px 20px; }
+  .moment-body { font-size: .98rem; }
+  .moment-body p { font-size: 1rem; }
 }
 
 /* ---------- preferences ---------- */
