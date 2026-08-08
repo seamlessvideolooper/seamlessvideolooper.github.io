@@ -24,7 +24,7 @@ Nothing wasted, nothing forced: A Hardware Test checks what your phone can actua
 
 Honest about what won't work: Not every motion can close cleanly — fast crossings, occlusion, and big camera moves can leave a seam visible no matter which candidate you pick, and the app says so instead of only showing its best angle. The same rule applies to what it reports about itself: the screens you can review before sending are the real ones, unedited.
 
-Predictable, and yours to adjust: Easy mode picks sensible defaults, but Advanced mode exposes the same real choices the app is weighing — which seam method, how camera drift is handled, what happens to the audio — instead of hiding them behind one button. The same goes for what leaves the phone: crash sharing and Hardware Test reporting are each a switch in Settings, not a default you have to hunt for.
+Predictable, and yours to adjust: Easy mode picks sensible defaults, but Advanced mode exposes the same real choices the app is weighing — which seam method, how camera drift is handled, what happens to the audio — instead of hiding them behind one button. The same goes for what leaves the phone: crash sharing, Hardware Test reporting, and render-failure reporting are each a switch in Settings, not a default you have to hunt for.
 
 ## Technical facts
 
@@ -32,7 +32,7 @@ Predictable, and yours to adjust: Easy mode picks sensible defaults, but Advance
 - Output is an MP4 container with H.264/AVC video; retained audio is encoded as AAC-LC.
 - Renders do not include an app watermark.
 - The loop always plays forward; the selected end returns to the selected beginning without reversing the footage (not a boomerang).
-- Video analysis, loop search, blending, and rendering run on-device. Network access is used for feedback, crash reports, Hardware Test reports, and a technical result record when a render is shared. Source and rendered video files are not attached to those records.
+- Video analysis, loop search, blending, and rendering run on-device. Network access is used for feedback, crash reports, Hardware Test reports, failure reports (what the app measured when a render stalled or came out wrong, so it can be fixed), and a technical result record when a render is shared. Source and rendered video files are not attached to those records.
 - The current Google Play release has no ads, no subscription, and no in-app purchase.
 - Publisher: SciNTech. Contact: scintech.dev@gmail.com
 - Google Play listing: https://play.google.com/store/apps/details?id=com.seamlessvideolooper.android

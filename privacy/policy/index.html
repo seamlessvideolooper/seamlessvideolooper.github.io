@@ -44,12 +44,13 @@
     <p>You select a video through Android’s system picker, open-file action, or share action. The app receives access to that selected file rather than broad read access to your media library.</p>
 
     <h2>Reports and shared-result records</h2>
-    <p>The app uses Firebase Anonymous Authentication and Firebase Firestore for feedback, crash reports, Hardware Test reports, and technical records submitted when a completed render is shared.</p>
+    <p>The app uses Firebase Anonymous Authentication and Firebase Firestore for feedback, crash reports, Hardware Test reports, failure reports, and technical records submitted when a completed render is shared.</p>
     <ul>
       <li><strong>Feedback:</strong> may include app and device details, settings, workflow context, video metadata, quality metrics, and a redacted log. You can remove optional items before sending.</li>
       <li><strong>Optional screenshot:</strong> feedback may include a screenshot you choose to attach. It can contain a visible frame from the selected video and is stored using Firebase Storage.</li>
       <li><strong>Crash reports:</strong> may include a stack trace, thread name, and device information. Automatic sharing can be disabled in Settings.</li>
       <li><strong>Hardware Test reports:</strong> may include component outcomes, timings, device details, and short error information. Reporting can be disabled in Settings.</li>
+      <li><strong>Failure reports:</strong> may include the type of issue the app detected in its own output (stalled progress, low measured seam quality, or suspected AI-interpolation artifacts), the timing and quality measurements behind that finding, the blend method used, and device information. This is the data that lets a render that went wrong on your device become a fix in a later version. No video, frame, or screenshot is included. Reporting can be disabled in Settings.</li>
       <li><strong>Shared-result records:</strong> may include video dimensions, frame rate, duration, codec and audio presence; cut, score, blend and audio choices; quality and motion results; processing time; app and device information; and an optional rating. The video file is not attached.</li>
     </ul>
 
@@ -69,6 +70,7 @@
     <ul>
       <li>Disable crash reporting in Settings.</li>
       <li>Disable Hardware Test reporting in Settings.</li>
+      <li>Disable render failure reporting in Settings.</li>
       <li>Review feedback fields and remove an optional screenshot before submission.</li>
     </ul>
 
