@@ -53,7 +53,7 @@
       <li><strong>Failure reports:</strong> may include the type of issue the app detected in its own output (stalled progress, low measured seam quality, or suspected AI-interpolation artifacts), the timing and quality measurements behind that finding, the blend method used, and device information. This is the data that lets a render that went wrong on your device become a fix in a later version. No video, frame, or screenshot is included. Reporting can be disabled in Settings.</li>
       <li><strong>Shared-result records:</strong> may include video dimensions, frame rate, duration, codec and audio presence; cut, score, blend and audio choices; quality and motion results; processing time; app and device information; and an optional rating. The video file is not attached.</li>
     </ul>
-    <p>Every report above also includes the language the app is currently displaying, as a BCP-47 tag (for example, en-US). Your device’s default language is included only when it differs from that.</p>
+    <p>Every report above also includes the language the app is currently displaying, as a BCP-47 tag (for example, en-US). When that differs from what your device or the app actually requested — for example, a language this app does not fully support falling back to English, or a separate in-app language override — the requested language and your device's default language are included as well.</p>
 
     <h2>Identifiers and accounts</h2>
     <p>No user-created account is required. Firebase creates an anonymous app-account identifier. Records also include Android ID so related submissions can be grouped and de-duplicated. These identifiers are not used as advertising IDs and are not intentionally tied to your name or email.</p>
