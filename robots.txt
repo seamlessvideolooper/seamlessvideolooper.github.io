@@ -31,3 +31,4 @@ Allow: /
 Disallow: /docs/
 
 Sitemap: https://seamlessvideolooper.github.io/sitemap.xml
+Sitemap: https://scintech-dev.github.io/sitemap.xml

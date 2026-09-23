@@ -1,31 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- This site moved to https://scintech-dev.github.io/ (spec 0069 S6); every page here is a redirect shell. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://seamlessvideolooper.github.io/</loc>
-    <lastmod>2026-08-06</lastmod>
+    <loc>https://scintech-dev.github.io/seamless-video-looper/</loc>
+    <lastmod>2026-09-23</lastmod>
   </url>
   <url>
-    <loc>https://seamlessvideolooper.github.io/how-it-works/</loc>
-    <lastmod>2026-08-06</lastmod>
+    <loc>https://scintech-dev.github.io/seamless-video-looper/how-it-works/</loc>
+    <lastmod>2026-09-23</lastmod>
   </url>
   <url>
-    <loc>https://seamlessvideolooper.github.io/examples/</loc>
-    <lastmod>2026-08-06</lastmod>
+    <loc>https://scintech-dev.github.io/seamless-video-looper/examples/</loc>
+    <lastmod>2026-09-23</lastmod>
   </url>
   <url>
-    <loc>https://seamlessvideolooper.github.io/compatibility/</loc>
-    <lastmod>2026-08-06</lastmod>
+    <loc>https://scintech-dev.github.io/seamless-video-looper/compatibility/</loc>
+    <lastmod>2026-09-23</lastmod>
   </url>
   <url>
-    <loc>https://seamlessvideolooper.github.io/privacy/</loc>
-    <lastmod>2026-08-06</lastmod>
+    <loc>https://scintech-dev.github.io/seamless-video-looper/privacy/</loc>
+    <lastmod>2026-09-23</lastmod>
   </url>
   <url>
-    <loc>https://seamlessvideolooper.github.io/privacy/policy/</loc>
-    <lastmod>2026-08-06</lastmod>
-  </url>
-  <url>
-    <loc>https://seamlessvideolooper.github.io/values/</loc>
-    <lastmod>2026-08-06</lastmod>
+    <loc>https://scintech-dev.github.io/about/</loc>
+    <lastmod>2026-09-23</lastmod>
   </url>
 </urlset>

@@ -1,54 +1,12 @@
-# Seamless Video Looper
+# Seamless Video Looper (moved)
 
-Seamless Video Looper is an Android app that finds candidate loop points in a video, previews them, and renders a forward-playing seamless loop — the selected end returns to the selected beginning. Loop search, stabilization, blending, audio processing, and rendering all happen on the device; video files are not uploaded for processing. The current Google Play release has no ads, no subscription, and no in-app purchase.
-
-Published by SciNTech (contact: scintech.dev@gmail.com). Get the app: https://play.google.com/store/apps/details?id=com.seamlessvideolooper.android
+This site moved to https://scintech-dev.github.io/seamless-video-looper/ on 2026-09-23, inside the SciNTech site (https://scintech-dev.github.io/). Every page here redirects to its new address. The current description for language models is https://scintech-dev.github.io/llms.txt.
 
 ## Pages
 
-- https://seamlessvideolooper.github.io/ — Product overview.
-- https://seamlessvideolooper.github.io/how-it-works/ — How the app finds and blends a loop point (candidate search, seam alignment/drift handling, blending, rendering).
-- https://seamlessvideolooper.github.io/examples/ — Screens from the app: selecting a clip, comparing candidates, shaping the seam, Hardware Test, rendering.
-- https://seamlessvideolooper.github.io/compatibility/ — Android version and media requirements, output format, FAQ.
-- https://seamlessvideolooper.github.io/privacy/ — How video and report data are handled.
-- https://seamlessvideolooper.github.io/privacy/policy/ — Full privacy policy.
-- https://seamlessvideolooper.github.io/values/ — The priorities behind the app.
-
-## Values
-
-Real technique, not decoration: The loop point isn't a guess: the app compares candidate frames for how they look and how they move, then ranks the strongest pairs before you ever see them. Where the phone supports it, optical flow and frame interpolation help the seam bend less — real technique aimed at one practical problem, not a demo reel.
-
-Your attention stays yours: No ad interrupts a place you came to be still in. The current release has no ads, no subscription, and no in-app purchase — nothing bidding for the attention you brought here on purpose.
-
-Nothing wasted, nothing forced: A Hardware Test checks what your phone can actually do — memory, decoding, the optional motion methods — and sets defaults from that, not from a guess. Large intermediate frames go to temporary storage instead of sitting in memory all at once, and a processing option your phone can't run well simply isn't offered.
-
-Honest about what won't work: Not every motion can close cleanly — fast crossings, occlusion, and big camera moves can leave a seam visible no matter which candidate you pick, and the app says so instead of only showing its best angle. The same rule applies to what it reports about itself: the screens you can review before sending are the real ones, unedited.
-
-Predictable, and yours to adjust: Easy mode picks sensible defaults, but Advanced mode exposes the same real choices the app is weighing — which seam method, how camera drift is handled, what happens to the audio — instead of hiding them behind one button. The same goes for what leaves the phone: crash sharing, Hardware Test reporting, and render-failure reporting are each a switch in Settings, not a default you have to hunt for.
-
-## Technical facts
-
-- Requires Android 8.0 (API 26) or later.
-- Output is an MP4 container with H.264/AVC video; retained audio is encoded as AAC-LC.
-- Renders do not include an app watermark.
-- The loop always plays forward; the selected end returns to the selected beginning without reversing the footage (not a boomerang).
-- Video analysis, loop search, blending, and rendering run on-device. Network access is used for feedback, crash reports, Hardware Test reports, failure reports (what the app measured when a render stalled or came out wrong, so it can be fixed), and a technical result record when a render is shared. Source and rendered video files are not attached to those records.
-- The current Google Play release has no ads, no subscription, and no in-app purchase.
-- Publisher: SciNTech. Contact: scintech.dev@gmail.com
-- Google Play listing: https://play.google.com/store/apps/details?id=com.seamlessvideolooper.android
-
-## Quick facts
-
-- What it does. Seamless Video Looper is an Android app that searches a video for a loop point — the frame where an ending can pass for a beginning — then renders that loop to play forward from the chosen end back to the chosen beginning.
-- Runs on-device. Loop search, motion analysis, seam blending, audio processing, and rendering all happen on the phone; no video file is uploaded for processing.
-- Searches, not just trims. Easy mode searches the clip and can prepare up to four loop-point candidates to preview before you pick one, instead of just cutting the clip to a fixed length.
-- Several ways to build the seam. Advanced mode offers four seam methods: Hard Cut (no blend), Crossfade, motion-aware warping, and frame interpolation on supported phones.
-- Handles camera movement. Seam alignment can correct horizontal or vertical shift and zoom, with Dance to preserve natural camera drift or Lock to steady it.
-- Adapts to the phone it's on. A Hardware Test checks each phone's memory, decoding, and optional motion-processing capability and sets defaults from that result, so an option the phone can't run well simply isn't offered.
-- No ads, subscription, or in-app purchase. The current Google Play release of Seamless Video Looper has no ads, no subscription, and no in-app purchase.
-- No watermark. Rendered videos do not include an app watermark.
-- No account required. Seamless Video Looper does not require a user account and contains no advertising or general usage-analytics SDK.
-- Broad Android support. The app requires Android 8.0 (API level 26) or later.
-- Output format. Rendered loops are saved as MP4 files with H.264/AVC video and, when audio is kept, AAC-LC audio.
-- Honest about limits. The app states plainly when a clip can't loop cleanly — fast crossings, occlusion, and large camera moves can leave a visible seam no matter which candidate is chosen.
-- Named research, not a black box. Seamless Video Looper's seam work is built on named, published computer-vision techniques: the NeuFlow v2 model for optical flow, the RIFE model for frame interpolation, and OpenCV's ORB feature matching to confirm a loop point actually closes.
+- https://scintech-dev.github.io/seamless-video-looper/ — Product overview.
+- https://scintech-dev.github.io/seamless-video-looper/how-it-works/ — How the app finds and blends a loop point.
+- https://scintech-dev.github.io/seamless-video-looper/examples/ — Screens from the app.
+- https://scintech-dev.github.io/seamless-video-looper/compatibility/ — Android version and media requirements, output format, FAQ.
+- https://scintech-dev.github.io/seamless-video-looper/privacy/ — How video and report data are handled, with the full privacy policy at https://scintech-dev.github.io/seamless-video-looper/privacy/#policy.
+- https://scintech-dev.github.io/about/ — The priorities behind SciNTech's apps (formerly /values/).
